@@ -42,7 +42,7 @@ func main() {
 	var b bool
 	fmt.Printf("%v %v %q %v\n", i, f, s, b) //%v : default print , %q  : for string with quote
 }
-*/
+
 // Type Inference
 import "fmt"
 
@@ -59,4 +59,13 @@ func main() {
 	)
 	fmt.Println(i, j, k)
 	fmt.Println(a, b, c)
+}
+*/
+//Reassigning Variables
+import "fmt"
+func main(){
+	var i int = 4
+	i = 45 //overwriting the i value
+	//i := 20 // don't allow to  overwrite the i value because it has been declared using 
+	fmt.Println("New Value of I is ", i)
 }
