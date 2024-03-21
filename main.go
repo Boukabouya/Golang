@@ -60,7 +60,7 @@ func main() {
 	fmt.Println(i, j, k)
 	fmt.Println(a, b, c)
 }
-*/
+
 //Reassigning Variables
 import "fmt"
 func main(){
@@ -68,4 +68,14 @@ func main(){
 	i = 45 //overwriting the i value
 	//i := 20 // don't allow to  overwrite the i value because it has been declared using 
 	fmt.Println("New Value of I is ", i)
+}
+*/
+
+// Variable scope
+import "fmt"
+
+var i int = 4 
+func main(){
+	var i int = 5 // scope variable , more prioritaire than the outside main func  var i 
+	fmt.Println(i)
 }
