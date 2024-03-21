@@ -48,7 +48,7 @@ import "fmt"
 
 func main() {
 	var i int
-	i = 1 
+	i = 1
 
 	var j int = 5
 	k := 9 //Type inference: Go automatically determines the type based on the context of the variable
@@ -66,16 +66,35 @@ import "fmt"
 func main(){
 	var i int = 4
 	i = 45 //overwriting the i value
-	//i := 20 // don't allow to  overwrite the i value because it has been declared using 
+	//i := 20 // don't allow to  overwrite the i value because it has been declared using
 	fmt.Println("New Value of I is ", i)
 }
-*/
+
 
 // Variable scope
 import "fmt"
 
-var i int = 4 
+var i int = 4
 func main(){
-	var i int = 5 // scope variable , more prioritaire than the outside main func  var i 
+	var i int = 5 // scope variable , more prioritaire than the outside main func  var i
 	fmt.Println(i)
+}
+*/
+//Type Conversion
+import (
+	"fmt"
+	"strconv"
+)
+func main() {
+	var i float32 = 5.3
+	var j int
+	j = int(i) // we loose the .3  part of the number
+
+	var s string
+	//s= string(j) // convert an integer into a string make an error by this way , so we should import  strconv package 
+	//and use this function : fmt. = fmt.Sprintf("%d", j)
+	s = strconv.Itoa(j) // convert an integer into a string
+	fmt.Printf("%v %T \n", i, i)
+	fmt.Printf("%v %T \n", j, j)
+	fmt.Printf("%v %T \n", s, s)
 }
