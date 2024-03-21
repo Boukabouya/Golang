@@ -28,17 +28,35 @@ func main() {
 	fmt.Println(i, f, f2, s, b, c)
 }*/
 // Variables exemple 02
-import (
+/*import (
 	"fmt"
 )
 
 func main() {
 	var i int
-	/*i = 5
-	i = 27
-	fmt.Println("\n The value  of i is ", i)//The value  of i is  27*/
+	//i = 5
+	//i = 27
+	//fmt.Println("\n The value  of i is ", i)//The value  of i is  27
 	var f float32
 	var s string
 	var b bool
 	fmt.Printf("%v %v %q %v\n", i, f, s, b) //%v : default print , %q  : for string with quote
+}
+*/
+// Type Inference
+import "fmt"
+
+func main() {
+	var i int
+	i = 1 
+
+	var j int = 5
+	k := 9 //Type inference: Go automatically determines the type based on the context of the variable
+	var (
+		a string = "hello"
+		b string = "amina"
+		c int    = 25
+	)
+	fmt.Println(i, j, k)
+	fmt.Println(a, b, c)
 }
