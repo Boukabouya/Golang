@@ -30,3 +30,23 @@ what you see in the screen is the code
 - lexer does a lot of work
 
 by installing go intellisense we don't need to write import we just write function directly
+
+## Lexer
+
+- In Go, semicolons are automatically removed in most cases but it's not the valide syntax , but there are some exceptions where we put it like loop.
+- After installing the go intellisense The lexer in programming languages that ensures correct syntax and variable definitions and automatically inserting semicolons in code.
+
+## Types
+
+- case insensitive : capital for the first letter -> exported and public
+small for the first letter -> private
+
+- Variables in golang should be known in advance and every thing is type in glonag .
+
+### simple types
+
+string integers float bool complex
+
+### Advenced types
+
+Arrat Slices Maps Structs Pointers functions channels ... almost everything
