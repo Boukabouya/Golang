@@ -65,3 +65,23 @@ go env is a tool to view and temporarily modify Go environment variables that co
 # GOOS="windows" ND GOOS="linux" 
 GOOS="darwin" go build # for macos
 ```
+
+## Memory management in golang
+
+The “new” and “make” keywords are used to allocate memory in Golang.
+
+### new()
+
+Allocate memory but not initilised
+you will get a memory address
+zeroed storege  it's mean we could not put any data
+
+### make()
+
+Allocate memory and initilised
+you will get a memory address
+non -zeroed storege  it's mean we could put any of the data
+
+### GC garbge collector happens auto
+
+the GC manages the allocation and release of memory and it's  released the unused objects and out of scope or nil
