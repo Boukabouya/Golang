@@ -50,3 +50,18 @@ string integers float bool complex
 ### Advenced types
 
 Arrat Slices Maps Structs Pointers functions channels ... almost everything
+
+## Build for windows , linux and mac
+
+- we just type
+
+```bash
+go env
+```
+
+go env is a tool to view and temporarily modify Go environment variables that configure aspects of the Go build process and from it we could see GOOS that mean the os that we go build and we could change it by add GOOS before the go build cli
+
+```bash
+# GOOS="windows" ND GOOS="linux" 
+GOOS="darwin" go build # for macos
+```
