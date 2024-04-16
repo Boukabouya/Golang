@@ -60,7 +60,7 @@ func PerformPostJsonRequest() {
 			"platform" : "LearnWithAmina.Alg"
 		}
 	`)
-	respons, err := http.Post(myurl, "text/html", requestBody)
+	respons, err := http.Post(myurl, "text/html", requestBody) // if it's json it will txt/json
 	if err != nil {
 		panic(err)
 	}
