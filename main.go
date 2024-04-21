@@ -83,18 +83,36 @@ func main(){
 //Type Conversion
 import (
 	"fmt"
+	"github.com/gorilla/mux"
+	"log"
+	"net/http"
 	"strconv"
 )
+
 func main() {
 	var i float32 = 5.3
 	var j int
 	j = int(i) // we loose the .3  part of the number
 
 	var s string
-	//s= string(j) // convert an integer into a string make an error by this way , so we should import  strconv package 
+	//s= string(j) // convert an integer into a string make an error by this way , so we should import  strconv package
 	//and use this function : fmt. = fmt.Sprintf("%d", j)
 	s = strconv.Itoa(j) // convert an integer into a string
 	fmt.Printf("%v %T \n", i, i)
 	fmt.Printf("%v %T \n", j, j)
 	fmt.Printf("%v %T \n", s, s)
+
+	greeter()
+	r := mux.NewRouter()
+	r.HandleFunc("/", serverHome).Methods("GET")
+
+	//http.ListenAndServe(":4000",r)
+	log.Fatal(http.ListenAndServe(":4000", r))
+
+}
+func greeter() {
+	fmt.Println("Hey there mod users")
+}
+func serverHome(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("<h1> Welocome to golang </h1>"))
 }
